@@ -13,7 +13,7 @@ import {
 import { StatusBar } from 'expo-status-bar';
 
 // Get a free API key from https://openweathermap.org/api and paste it below
-const API_KEY = 'YOUR_OPENWEATHERMAP_API_KEY';
+const API_KEY = '360d07b883bf2113a478f030b6384bca';
 const BASE_URL = 'https://api.openweathermap.org/data/2.5/weather';
 
 export default function App() {
