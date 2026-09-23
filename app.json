@@ -6,7 +6,7 @@
     "orientation": "portrait",
     "userInterfaceStyle": "light",
     "splash": {
-      "backgroundColor": "#4A90D9"
+      "backgroundColor": "#0f1b3d"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -16,7 +16,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#4A90D9"
+        "backgroundColor": "#0f1b3d"
       }
     },
     "web": {
