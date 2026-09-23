@@ -1,27 +1,34 @@
 # Weather App (React Native + Expo)
 
-A simple cross-platform weather app built with React Native and Expo. Users can
-search for any city and see the current temperature, weather description,
-humidity, and wind speed, using live data from the OpenWeatherMap API.
+A cross-platform weather app built with React Native and Expo. Search any
+city to see the current temperature, condition, humidity, and wind speed,
+using live data from the OpenWeatherMap API — styled with a dusk-sky gradient,
+custom weather icons, and a serif/sans type pairing.
 
 ## Features
 - Search weather by city name
-- Displays temperature, "feels like", humidity, and wind speed
-- Clean, responsive UI that works on both Android and iOS
+- Displays temperature, condition, "feels like", humidity, and wind speed
+- Custom SVG weather icons (sun, cloud, rain, storm, snow, mist) that match
+  the live condition returned by the API
+- Gradient background with Fraunces + Inter typography
 - Loading and error states for a smooth user experience
 
 ## Tech Stack
 - **React Native** – cross-platform mobile UI framework
 - **Expo** – toolchain for building/running React Native apps
+- **expo-linear-gradient** – background gradient
+- **react-native-svg** – custom weather icons
+- **@expo-google-fonts/fraunces & inter** – typography
 - **OpenWeatherMap API** – free weather data API
 
 ## Project Structure
 ```
 WeatherApp/
 ├── App.js          # Main app component (UI + logic)
-├── app.json        # Expo app configuration
-├── package.json     # Project dependencies
-└── README.md         # Project documentation
+├── WeatherIcons.js   # Custom SVG weather icon components
+├── app.json          # Expo app configuration
+├── package.json       # Project dependencies
+└── README.md            # Project documentation
 ```
 
 ## Setup Instructions
@@ -35,7 +42,8 @@ WeatherApp/
    npm install
    ```
 3. Get a free API key from [OpenWeatherMap](https://openweathermap.org/api)
-   and paste it into the `API_KEY` constant in `App.js`.
+   and paste it into the `API_KEY` constant in `App.js` (a working key is
+   already included for demo purposes).
 4. Start the app:
    ```
    npx expo start
@@ -45,10 +53,10 @@ WeatherApp/
    Android/iOS emulator.
 
 ## How It Works
-- The user types a city name and taps **Search**.
+- The user types a city name and taps the search icon.
 - The app calls the OpenWeatherMap REST API using `fetch()`.
-- The JSON response (temperature, humidity, wind speed, description) is
-  stored in state and rendered on screen.
+- The JSON response (temperature, humidity, wind speed, condition) is stored
+  in state and rendered on screen, with a matching custom weather icon.
 - Loading and error states are handled so the UI never gets stuck.
 
 ## Author
